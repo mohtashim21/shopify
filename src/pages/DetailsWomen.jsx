@@ -10,7 +10,6 @@ const DetailsWomen = () => {
   const [data, setdata] = useState(null);
   const [url, seturl] = useState(null)
 
-  hiiii
   useEffect(() => {
     firebase
       .getProductByIdWomen(id)
