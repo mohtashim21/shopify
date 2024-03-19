@@ -32,7 +32,7 @@ const DetailsMen = () => {
 
 
   if (!product) {
-    return <div>.......</div>;
+    return <div>{console.log("loading men")}</div>;
   }
 
   return (
@@ -62,3 +62,4 @@ const DetailsMen = () => {
 };
 
 export default DetailsMen;
+

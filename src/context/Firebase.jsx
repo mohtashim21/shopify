@@ -21,7 +21,6 @@ import {
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 const FirebaseContext = createContext(null);
-//   container                      empty
 
 const firebaseConfig = {
   apiKey: "AIzaSyB2f-F3TQOcIhemi5av3IRyQfdS_BbqUiY",
@@ -162,57 +161,6 @@ export const FirebaseProvider = (props) => {
     return result;
   };
 
-  // const placeOrderMen = async (productId, qty) => {
-  //   const collectionRef = collection(
-  //     firestore,
-  //     "products_men",
-  //     productId,
-  //     "orders"
-  //   );
-  //   const result = await addDoc(collectionRef, {
-  //     UserID: user.uid,
-  //     UserEmail: user.email,
-  //     displayName: user.displayName,
-  //     qty: Number(qty),
-  //   });
-  //   return result;
-  // };
-
-  // const placeOrderWomen = async (productId, qty) => {
-  //   const collectionRef = collection(
-  //     firestore,
-  //     "products_women",
-  //     productId,
-  //     "orders"
-  //   );
-  //   const result = await addDoc(collectionRef, {
-  //     UserID: user.uid,
-  //     UserEmail: user.email,
-  //     displayName: user.displayName,
-  //     qty: Number(qty),
-  //   });
-  //   return result;
-  // };
-
-  // const fetchMyOrdersMen = async () => {
-  //   const collectionRef = collection(firestore, "products_men");
-  //   const q = query(collectionRef, where("userID", "==", user.uid));
-  //   console.log(user);
-
-  //   const result = await getDocs(q);
-  //   console.log(result);
-  // };
-
-  // const fetchMyOrdersWomen = async () => {
-  //   const collectionRef = collection(firestore, "products_women");
-  //   const q = query(collectionRef, where("userID", "==", user.uid));
-  //   console.log(user);
-
-  //   const result = await getDocs(q);
-  //   console.log(result);
-  // };
-
-
   const getImageURL = (path) => {
     return getDownloadURL(ref(storage, path));
   };
@@ -237,10 +185,6 @@ export const FirebaseProvider = (props) => {
         getImageURL,
         getProductByIdMen,
         getProductByIdWomen,
-        // placeOrderMen,
-        // placeOrderWomen,
-        // fetchMyOrdersMen,
-        // fetchMyOrdersWomen,
         isLoggedIn,
       }}
     >
